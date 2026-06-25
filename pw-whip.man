@@ -1,0 +1,52 @@
+.TH PW-WHIP 1
+.SH NAME
+pw-whip \- bridge PipeWire with the WHIP protocol
+.SH SYNOPSIS
+.B pw\-whip
+.IR option ...
+.I endpoint
+.SH DESCRIPTION
+.I PipeWire
+is a multimedia framework for handling audio and video on Linux.
+.IR WHIP ,
+the
+.I WebRTC-HTTP Ingestion Protocol
+(RFC 9725), is a standardised protocol for streaming audio and video to
+a network server.
+
+The program
+.B pw\-whip
+implements a bridge between
+.I PipeWire
+and
+.IR WHIP ,
+which allows streaming audio from any Linux application that is able to
+speak to
+.IR PipeWire .
+.SH OPTIONS
+.TP
+.B \-k
+Do not check TLS certificates (insecure).
+.TP
+.BI \-t " token"
+Specify the bearer token to use for
+.I WHIP
+connections.
+.TP
+.B \-c
+Autoconnect to the default
+.I PipeWire
+source.
+.TP
+.BI \-C " target"
+Connect to the given
+.I PipeWire
+source.
+.TP
+.BI \-b " bitrate"
+Choose the Opus bitrate, in bits per second.
+.TP
+.B \-d
+Enable debug logging.
+.SH AUTHOR
+Juliusz Chroboczek.
