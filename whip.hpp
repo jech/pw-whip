@@ -15,7 +15,6 @@ public:
         this->token = token;
         this->insecure = insecure;
         this->closed = true;
-        this->seqno = 42;
     }
 
     ~WhipClient() {
