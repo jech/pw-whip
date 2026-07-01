@@ -47,7 +47,7 @@ make -j LIBDATACHANNEL_ROOT=/usr/local/src/libdatachannel
 
 You may optionally install `pw-whip`:
 ```sh
-sudo make install`
+sudo make install
 ```
 
 ## Usage
