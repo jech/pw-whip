@@ -155,12 +155,12 @@ static void on_stream_param_changed(void *closure,
 
     res = opus_encoder_ctl(data->encoder, OPUS_SET_INBAND_FEC(1));
     if(res != OPUS_OK)
-        pw_log_warn("Couln't set Opus bitrate: %s", opus_strerror(res));
+        pw_log_warn("Couln't enable Opus FEC: %s", opus_strerror(res));
 
     if(data->bitrate > 0) {
         res = opus_encoder_ctl(data->encoder, OPUS_SET_BITRATE(data->bitrate));
         if(res != OPUS_OK)
-            pw_log_warn("Couln't enable Opus FEC: %s", opus_strerror(res));
+            pw_log_warn("Couldn't set Opus bitrate: %s", opus_strerror(res));
     }
 }
 
