@@ -25,6 +25,7 @@ apt install libopus-dev libpipewire-0.3-dev
 cd ~/src
 git clone https://github.com/paullouisageneau/libdatachannel
 cd libdatachannel
+git submodule update --init --recursive --depth 1
 cmake -Bbuild
 cd build
 make -j
